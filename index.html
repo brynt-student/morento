@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brynt Morento – Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="logo" href="#top">Brynt Morento</a>
+    <nav aria-label="Main">
+      <ul id="navList">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Exploring</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button class="icon-btn" id="themeBtn" aria-label="Switch color theme">☾</button></li>
+      </ul>
+    </nav>
+    <button class="icon-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navList">☰</button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <h1>Brynt Morento</h1>
+      <div class="redline" aria-hidden="true"></div>
+      <p class="lead">First-year BSIT student. I like taking things apart to see how they work, from computers to motorcycle engines.</p>
+      <a class="btn primary" href="#projects">See what I’m exploring</a>
+      <a class="btn ghost" href="#contact">Get in touch</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about">
+      <div>
+        <h2>About me</h2>
+        <p>I’m a first-year Bachelor of Science in Information Technology student at the University of Immaculate Conception. I enjoy tinkering with things, especially computers.</p>
+        <p>Right now I’m learning how the electrical components on a motorcycle work and how to get more horsepower out of a motorcycle engine.</p>
+      </div>
+      <div>
+        <h2>Skills</h2>
+        <div class="skills">
+          <span>Computer tinkering</span><span>Troubleshooting</span>
+          <span>Motorcycle electrical systems</span><span>Engine tuning (learning)</span>
+          <span>HTML</span><span>CSS</span><span>JavaScript</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <h2>Education</h2>
+      <ol class="timeline">
+        <li>
+          <h3>UIC</h3>
+          <p>Kindergarten to Grade 4</p>
+        </li>
+        <li>
+          <h3>Fr. Justin Russolilo School of Davao</h3>
+          <p>Transferred here and graduated elementary</p>
+        </li>
+        <li>
+          <h3>Maryknoll Academy of Cateel</h3>
+          <p>Moved with my family to our home province, Cateel. Graduated junior high school and senior high school.</p>
+        </li>
+        <li>
+          <h3>University of Immaculate Conception</h3>
+          <p>BSIT, first year (current)</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2>What I’m exploring</h2>
+      <div class="filters" role="group" aria-label="Filter topics">
+        <button data-filter="all" aria-pressed="true">All</button>
+        <button data-filter="computers" aria-pressed="false">Computers</button>
+        <button data-filter="motorcycles" aria-pressed="false">Motorcycles</button>
+      </div>
+      <div class="grid" id="grid">
+        <article class="project" data-cat="computers">
+          <div class="thumb">💻</div>
+          <div class="info"><h3>Computer tinkering</h3><p>Opening up computers, finding out what each part does, and figuring out how to fix or improve them.</p><small>Hardware, troubleshooting</small></div>
+        </article>
+        <article class="project" data-cat="motorcycles">
+          <div class="thumb">⚡</div>
+          <div class="info"><h3>Motorcycle electrical systems</h3><p>Learning how the battery, wiring, ignition, and other electrical parts of a motorcycle work together.</p><small>Currently learning</small></div>
+        </article>
+        <article class="project" data-cat="motorcycles">
+          <div class="thumb">🏍️</div>
+          <div class="info"><h3>More engine horsepower</h3><p>Studying how motorcycle engines make power and what changes can increase it.</p><small>Currently learning</small></div>
+        </article>
+        <article class="project" data-cat="computers">
+          <div class="thumb">🌐</div>
+          <div class="info"><h3>This portfolio</h3><p>My first portfolio site, built with HTML, CSS, and JavaScript.</p><small>HTML, CSS, JavaScript</small></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <h2>Contact</h2>
+      <p>Want to talk about computers, motorcycles, or a project? Send me a message.</p>
+      <form id="contactForm" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" autocomplete="name">
+        <p class="err" id="nameErr"></p>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email">
+        <p class="err" id="emailErr"></p>
+        <label for="msg">Message</label>
+        <textarea id="msg" name="msg"></textarea>
+        <p class="err" id="msgErr"></p>
+        <button class="btn primary" type="submit">Send message</button>
+        <p id="status" role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="year"></span> Brynt Morento. Built with HTML, CSS, and JavaScript.</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
